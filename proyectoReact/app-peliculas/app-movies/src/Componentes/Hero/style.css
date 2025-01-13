@@ -1,0 +1,56 @@
+.hero{
+    width: 80%;
+    margin: auto;
+    /* margin-top: 16px; */
+    border-radius: 8px;
+
+}
+.info-pelicula {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 12px;
+    position: absolute;
+    bottom: 30px;
+    width: 50%;
+}
+.titulo-pelicula{
+    font-size:30px;
+    line-height: 36px;
+    font-weight: 900;
+}
+.sinopsis-pelicula {
+    text-align: start;
+    font-size:18px;
+    line-height: 28px
+}
+.container-btns{
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+}
+@media (min-width:670px) {
+    .hero{
+        height: calc(100vh - 48px);
+    }
+}
+
+@media (width <= 769px) {
+    .hero{
+        width: 99%;
+    }
+    .info-pelicula{
+        position: relative;
+        bottom: 0px;
+        width: 100%;
+    }
+}
+
+@media (min-width:640px) {
+    .hero{
+        width: 100%;
+        margin-bottom: 18px;
+        position: relative;
+    }
+}
+

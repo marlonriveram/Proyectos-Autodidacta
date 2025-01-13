@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ali</title>
+    <style>
+        *{
+            margin: 0px;
+            box-sizing: border-box;
+        }
+       .card{
+        width: 60%;
+        background-color: #F7F9F9 ;
+        margin: 90px;
+        box-shadow: 10px 5px 10px;
+        border: 2px solid black;
+       }
+       .container{
+        width: 100%;
+       }
+
+       .header{
+        display: flex;
+        margin-bottom: 20px;
+        background-color: skyblue;
+       
+       }
+       .header img{
+        width: 90%;
+        height: 90%;
+        border-radius: 50%;
+       }
+       .card__avatar{
+        width: 20%;
+       }
+       h1{
+        font-size: 2rem;
+        margin-bottom: 5px;
+       }
+       h2{
+        font-weight: normal;
+        color:#ddd;
+       }
+       .imagen{
+        background-color: #808B96 ;
+        width: 90%;
+        margin: 0px 0px 0px 30px;
+       }
+       .imagen__principal{
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+       }
+       .contenido{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       }
+       p{
+        font-size: 1.5rem;
+        font-family: 'Climate Crisis', cursive;
+        width: 80%;
+        margin-bottom: 20px;
+       }
+
+       .quieneliges{
+        background-color: hsl(210, 29%, 29%);
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-auto-rows:min-content;
+        justify-items: center;
+        padding: 10px 0px 0px 0px;
+       }
+       button{
+        width: 150px;
+        height: 50px;
+        font-size: 30px;
+        border-radius: 30px;
+       }
+       .quieneliges div{
+        width: 50px;
+       }
+       .zoro{
+        color: #229954 ;
+    
+       }
+       .sanji{
+        color: #F4D03F;
+       }
+       .zoro:hover{
+        box-shadow: 5px 5px 50px green;
+       }
+
+       .sanji:hover{
+        box-shadow: 5px 5px 50px yellow;
+       }
+
+    </style>
+</head>
+<body>
+    <main class="card">
+        <section class="header container">
+            <div class="card__avatar">
+                <img src="https://i.pinimg.com/564x/98/c4/9b/98c49b9dab6b3b1195bb60d914e7aeee--throw-pillow-covers-throw-pillows.jpg" alt="Avatar">
+            </div>
+            <div class="card__titulo">
+                <h1>Zoro vs Sanji</h1>
+                <h2>Tripulacion Muguiwara</h2>
+            </div>
+        </section>
+        <section class="imagen container">
+            <img src="https://alfabetajuega.com/hero/2020/01/one-piece-sanji-zoro.jpg?width=768&aspect_ratio=16:9&format=nowebp" alt="zoro vs sanji" class="imagen__principal">
+        </section>
+        <section class="contenido container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quia autem aperiam at rerum neque quisquam sapiente cum illo magnam. Iure mollitia, explicabo perferendis accusantium minus adipisci tenetur. Sint, animi.</p>
+
+            <div class="quieneliges">
+                <button class="zoro">Zoro</button>
+                <button class="sanji">Sanji</button>
+                <div>💚</div>
+                <div>💛</div>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>

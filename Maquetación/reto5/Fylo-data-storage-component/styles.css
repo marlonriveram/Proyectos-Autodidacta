@@ -1,0 +1,194 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+:root{
+    /* Primary */
+    --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+
+    /* Neutral */
+
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    background: url(./images/bg-mobile.png) no-repeat;
+    background-size: cover;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container__box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+.box{
+    width: 80%;
+    background: var(--Dark-Blue);
+}
+.logo{
+    width: 150px;
+    margin:30px 0 30px 0;
+}
+.box__number1{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px 60px 10px 10px;
+    max-width: 290px;
+}
+.box__number1__icons{
+    display: flex;
+    
+}
+.container__img{
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    background: var(--Very-Dark-Blue);
+    margin: 10px;
+    border-radius: 5px;
+}
+.box__number2{
+    display: grid;
+    grid-template-rows:auto 1fr;
+    border-radius: 5px;
+    max-width: 560px;
+    position: relative;
+}
+.box__number2__info{
+    text-align: center;
+    color: var(--Pale-Blue);
+    margin-top: 40px;
+    font-weight: 100;
+}
+.box__number2__info span{
+    font-weight: bold;
+}
+.container__barra{
+    display: grid;
+    grid-template-rows: repeat(2,auto);
+    grid-template-columns: 20px 1fr 1fr 20px;
+    margin: 8px 0 40px 0;
+}
+.barra{
+    width: 100%;
+    height: 20px;
+    background: var(--Very-Dark-Blue);
+    border-radius: 20px;
+    margin-bottom: 12px;
+    grid-area: 1/2/2/4;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.loading{
+
+    width: 80%;
+    height: 80%;
+    border-radius:20px;
+    display: block;
+    background:linear-gradient(90deg,hsl(6, 100%, 80%) , hsl(335, 100%, 65%));
+    margin-left: 2px;
+    position: relative;
+}
+.loading::after{
+    content: '';
+    display: block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+   background-color: white;
+   position: absolute;
+   right: 6px;
+   top: 1px;
+}
+.cero__gb{
+    color: var(--Pale-Blue);
+    grid-area: 2/2/3/3;
+}
+.mil__gb{
+    color: var(--Pale-Blue);
+    text-align: end;
+    grid-area: 2/3/3/4;
+}
+.red__navegacion{
+    text-align: center;
+    background-color: white;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--Very-Dark-Blue);
+    width: 190px;
+    height: 70px;
+    padding: 10px;
+    border-radius: 12px;
+    position: absolute;
+    bottom: -45px;
+    left: 58px;
+}
+.gb__left{
+    font-size: 15px;
+    color: var(--Pale-Blue);
+}
+@media (min-width:981px) {
+    body{
+        background: url(./images/bg-desktop.png) no-repeat,var(--Very-Dark-Blue);
+        background-size: contain; 
+        background-position: center;
+    }
+    
+}
+@media (min-width:640px) {
+    body{
+        background: url(./images/bg-desktop.png) no-repeat,var(--Very-Dark-Blue);
+        background-position: bottom;
+    }
+    .container__box{
+        align-items: end;
+    }
+    .box__number2{
+        height: 170px;
+        padding-left: 20px;
+        z-index: -2;
+    }
+    .box__number2__info{
+        text-align: start;
+    }
+    .red__navegacion{
+        height: 65px;
+        top: -200px;
+        left: 300px;
+        position: relative;
+        
+    }
+    .red__navegacion::after{
+        content: '';
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        transform: 
+       rotate(45deg) skewX(10deg) skewY(10deg);
+        position: absolute;
+        top: 35px;
+        right:4px;
+        z-index: -1;
+    }
+
+}
+

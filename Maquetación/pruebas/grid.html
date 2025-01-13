@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        main{
+            height: 400px;
+            background-color: papayawhip;
+            display: grid;
+            grid-template-columns: 1fr 100px 1fr;
+            grid-template-rows: 1fr 1fr;
+            /* grid-template-rows: 100px 100px 100px; */
+            /* place-items: center; */
+        }
+        .Arriba{
+            background-color: aquamarine;
+            grid-area: 1 / 1 / 2 / 4;
+        }
+        .Abajo{
+            background-color: blueviolet;
+            grid-area: 2 / 1 / 3 / 4;
+        }
+         .medio{
+            box-sizing: border-box;
+            z-index: 2;
+            grid-area:1/ 2 / 3 /3;
+            display: grid;
+            grid-template-rows: 1fr 100px 1fr;
+        } 
+        img{
+            grid-row: 2 / 3;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+    </style>
+</head>
+<body>
+<main>
+   
+    <div class="Arriba"></div>
+    <div class="medio">
+        <img src="https://images.pexels.com/photos/1404819/pexels-photo-1404819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+    </div>
+    <div class="Abajo"></div>
+
+</main>
+
+
+</body>
+</html>

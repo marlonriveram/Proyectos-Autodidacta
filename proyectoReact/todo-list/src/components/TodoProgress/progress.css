@@ -1,0 +1,16 @@
+.progress{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+.progress__status{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.progress__btn-add{
+    cursor: pointer;
+    color: black;
+}
+

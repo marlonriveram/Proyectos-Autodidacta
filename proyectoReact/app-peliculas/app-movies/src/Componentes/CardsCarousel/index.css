@@ -1,0 +1,12 @@
+
+.Container_img{
+    height: 100%;
+}
+.img-card{
+    height: 100%;
+    border-radius: 8px;
+}
+.img-card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}

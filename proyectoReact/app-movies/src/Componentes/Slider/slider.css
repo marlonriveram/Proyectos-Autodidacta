@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+.slider{
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+@media (width <= 530px) {
+    .slider{
+        height: 200px;
+        overflow: scroll;
+    }
+}

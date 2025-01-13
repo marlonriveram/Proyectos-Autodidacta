@@ -1,0 +1,50 @@
+
+.form{
+    width: 80%;
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+}
+.form__search{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding-top: 8px;
+    background: transparent;
+}
+.form__search:focus + .form__nombre .form__text,
+.form__search:valid + .form__nombre .form__text{
+    transform: translateY(-120%);
+    font-size: 14px;
+}
+.form__search:focus + .form__nombre::after,
+.form__search:valid + .form__nombre::after{
+    transform: translateY(0%);
+}
+.form__nombre{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 98%;
+    pointer-events: none;
+    border-bottom: 1px solid;
+
+}
+.form__nombre::after{
+    content: '';
+    position: absolute;
+    bottom:-1px ;
+    width:100% ;
+    height: 3px;
+    background: red;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+.form__text{
+    position: absolute;
+    bottom: 0;
+    transition: transform 0.5s ease;
+    
+}

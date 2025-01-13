@@ -1,0 +1,24 @@
+.more-movies{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,300px));
+    grid-auto-rows: 300px;
+    justify-content: center;
+    width: 98%;
+}
+.container-more-movies{
+    /* display: flex;
+    flex-direction: column; */
+    height: 100%;
+   
+}
+.bottom-back{
+    position: relative;
+    height: 50px;
+}
+
+@media (width <= 530px) { 
+    .more-movies{
+        grid-template-columns: repeat(auto-fit,minmax(100px,150px));
+        grid-auto-rows: 245px;
+    }
+}

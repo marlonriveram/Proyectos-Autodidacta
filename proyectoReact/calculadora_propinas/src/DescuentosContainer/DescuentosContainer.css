@@ -1,0 +1,11 @@
+.container-descuentos{
+    display: grid;
+    justify-content: center;
+    gap: 20px 40px;
+    grid-template-columns: repeat(2,45%);
+    grid-template-rows: repeat(3,60px);
+    cursor: pointer;
+}
+.titulo-descuentos{
+    margin-left: 6px;
+}

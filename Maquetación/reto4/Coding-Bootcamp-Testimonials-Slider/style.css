@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+:root{
+    --Dark-Blue: hsl(240, 38%, 20%);
+    --Grayish-Blue: hsl(240, 18%, 77%);
+}
+body{
+    margin: 0px;
+}
+.container{
+    height:100vh; 
+    min-width: 300px;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    grid-auto-rows: 1fr;
+    gap: 24px;
+    border: 1px solid;
+    background-color:white;
+}
+.container__primary{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container--fondo{
+    background: url(./images/pattern-bg.svg) no-repeat;
+    background-size:contain;
+    background-position: center center;
+}
+.container__imagen{
+    width: 60%;
+    position: relative;
+}
+.imagen__tanya{
+   width: 100%;
+}
+.prev__next{
+    background-color: white;
+    display: flex;
+    border-radius: 50px;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    height: 30px;
+    position: fixed;
+    top:270px;
+    left:145px;
+}
+.barra{
+    height: 20px;
+}
+.container__secondary{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.container__text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.subtitle{
+    display: flex;
+    flex-direction: column;
+    align-content:end;
+    padding: 8px;
+}
+.container--fondo2{
+     background: 50% 0% no-repeat url("  ./images/pattern-quotes.svg"),url("./images/pattern-curve.svg") no-repeat  0% 100% / contain ; 
+     
+}
+.text{
+    font-size: 20px;
+    margin-top: 32px;
+    padding: 8px;
+}
+.name{
+    color:var(--Dark-Blue);
+    font-size: 20px;
+    font-weight:bold;
+}
+.engineer{
+    color: var(--Grayish-Blue);
+}
+ 
+ @media screen and (min-width:600px) {
+    .container__text{
+        position: absolute;
+        width:auto;
+     }
+     .container__primary{
+        grid-area:1 / 2 / 2 / 3;
+    }
+    .container__secondary{
+        place-content: center;
+        grid-area:1 / 1 / 2 / 2;
+        text-align: start;
+        position: relative;
+    }
+    .text{
+        font-size: 30px;
+        text-align: start;
+    }
+    .subtitle{
+       flex-direction: row;
+    }
+    .name, .engineer{
+        font-size: 20px;
+       margin-left:10px;
+    }
+    
+} @media screen and (min-width:1000px){
+
+    .container__text{
+        left: 25%;
+        width:100%;
+        text-align: start;
+     }
+}

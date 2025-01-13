@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tranfrom Style</title>
+    <style>
+        /* con transform-style es elemento hijo conserva su plano 3D y no el de su padres */
+        body{
+            perspective: 700px;
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+            margin: auto;
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            background: khaki;
+            transform: rotateX(45deg);
+            box-sizing: border-box;
+            padding: 100px 0 0 20px ;
+            
+            transform-style: preserve-3d;
+           
+        }
+        .item{
+            font-size: 20px;
+            background-color: gray;
+            height: 50px;
+            transform: rotateY(45deg);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <p class="item">Soy el hijo y mi padre esta en 3D</p>
+    </div>
+  
+</body>
+</html>

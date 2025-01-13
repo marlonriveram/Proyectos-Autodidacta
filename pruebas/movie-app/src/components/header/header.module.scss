@@ -1,0 +1,273 @@
+@use "styles/variables.scss";
+
+.header {
+	align-items: center;
+	background-color: var(--header-bg);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2rem;
+	height: 8rem;
+	margin: 0 auto;
+	max-width: 115rem;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+
+	&__logo {
+		align-items: flex-end;
+		color: var(--main-color);
+		display: flex;
+		font-size: clamp(2rem, 5vw, 3.5rem);
+		font-weight: bold;
+		user-select: none;
+		transition: filter 0.2s ease-in-out;
+
+		&:hover,
+		&:active,
+		&:focus {
+			filter: brightness(1.1);
+		}
+
+		img {
+			height: clamp(3rem, 6vw, 4.5rem);
+			margin-right: 1rem;
+		}
+	}
+
+	&__hamburger {
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		min-width: 3.2rem;
+		position: relative;
+		z-index: 2;
+
+		&:hover {
+			line {
+				stroke: var(--main-color);
+			}
+		}
+
+		line {
+			stroke: var(--main-color);
+			stroke-width: 10%;
+			stroke-linecap: round;
+			transition: stroke 0.3s ease-in-out;
+		}
+
+		&_top {
+			animation: top-off 0.5s;
+			-webkit-animation-fill-mode: forwards;
+			-moz-animation-fill-mode: forwards;
+			-o-animation-fill-mode: forwards;
+			-ms-animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
+		}
+
+		&_middle {
+			animation: middle-off 0.5s;
+			-webkit-animation-fill-mode: forwards;
+			-moz-animation-fill-mode: forwards;
+			-o-animation-fill-mode: forwards;
+			-ms-animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
+		}
+
+		&_bottom {
+			animation: bottom-off 0.5s;
+			-webkit-animation-fill-mode: forwards;
+			-moz-animation-fill-mode: forwards;
+			-o-animation-fill-mode: forwards;
+			-ms-animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
+		}
+
+		&_active {
+			.header__hamburger_top {
+				animation: top-on 0.5s;
+				-webkit-animation-fill-mode: forwards;
+				-moz-animation-fill-mode: forwards;
+				-o-animation-fill-mode: forwards;
+				-ms-animation-fill-mode: forwards;
+				animation-fill-mode: forwards;
+			}
+
+			.header__hamburger_middle {
+				animation: middle-on 0.5s;
+				-webkit-animation-fill-mode: forwards;
+				-moz-animation-fill-mode: forwards;
+				-o-animation-fill-mode: forwards;
+				-ms-animation-fill-mode: forwards;
+				animation-fill-mode: forwards;
+			}
+
+			.header__hamburger_bottom {
+				animation: bottom-on 0.5s;
+				-webkit-animation-fill-mode: forwards;
+				-moz-animation-fill-mode: forwards;
+				-o-animation-fill-mode: forwards;
+				-ms-animation-fill-mode: forwards;
+				animation-fill-mode: forwards;
+			}
+		}
+
+		@keyframes top-on {
+			from {
+				transform: rotate(0deg);
+			}
+
+			to {
+				transform: translate(25%, 0%) rotate(45deg);
+			}
+		}
+
+		@keyframes middle-on {
+			from {
+				transform: rotate(0deg);
+			}
+
+			to {
+				transform: translate(-25%, 50%) rotate(-45deg);
+			}
+		}
+
+		@keyframes bottom-on {
+			from {
+				transform: rotate(0deg);
+			}
+
+			to {
+				transform: rotate(45deg) translate(16%, -76%);
+			}
+		}
+
+		@keyframes top-off {
+			from {
+				transform: translate(25%, 0%) rotate(45deg);
+			}
+
+			to {
+				transform: rotate(0deg);
+			}
+		}
+
+		@keyframes middle-off {
+			from {
+				transform: translate(-25%, 50%) rotate(-45deg);
+			}
+
+			to {
+				transform: rotate(0deg);
+			}
+		}
+
+		@keyframes bottom-off {
+			from {
+				transform: rotate(45deg) translate(16%, -76%);
+			}
+
+			to {
+				transform: rotate(0deg);
+			}
+		}
+	}
+
+	&__menu {
+		background: var(--aside-bg);
+		box-shadow: 0px 0px 10px var(--shadow-color);
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+		justify-content: center;
+		max-width: 25rem;
+		padding: 2rem;
+		position: fixed;
+		right: 0;
+		transform: translateX(100%);
+		transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+		top: 0;
+		visibility: hidden;
+		width: 80vw;
+		will-change: transform, visibility;
+		z-index: 1;
+
+		&_open {
+			transform: translateX(0);
+			visibility: visible;
+		}
+
+		&_list {
+			flex-flow: column nowrap;
+		}
+	}
+
+	&__backdrop {
+		background-color: rgba(3, 9, 30, 0.6);
+		border: none;
+		display: block;
+		backdrop-filter: blur(2px);
+		left: 0;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		width: 100vw;
+	}
+
+	ul {
+		align-items: center;
+		display: flex;
+		list-style: none;
+		justify-content: center;
+		gap: 2rem;
+	}
+
+	&__nav {
+		display: none;
+	}
+
+	li {
+		font: bold variables.$fz-lg variables.$font;
+
+		a,
+		button {
+			color: var(--text-color);
+			text-decoration: none;
+			position: relative;
+			width: fit-content;
+
+			&:hover,
+			&:active,
+			&:focus {
+				color: var(--main-color);
+				outline: none;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.header {
+		&__hamburger,
+		&__menu {
+			display: none;
+		}
+
+		&__nav {
+			&:not(.mobile) {
+				display: initial;
+			}
+
+			&__list {
+				align-items: center;
+				display: flex;
+				justify-content: center;
+
+				li {
+					margin: 0 1rem;
+				}
+			}
+		}
+	}
+}

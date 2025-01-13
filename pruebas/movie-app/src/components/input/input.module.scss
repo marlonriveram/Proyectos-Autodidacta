@@ -1,0 +1,95 @@
+@use "styles/variables.scss";
+
+.input {
+	align-items: center;
+	border: 1px solid var(--main-color);
+	border-radius: 0.5rem;
+	display: flex;
+	margin-bottom: 1rem;
+	width: 100%;
+
+	&.error {
+		border-color: var(--error-color);
+
+		input {
+			color: var(--error-color) !important;
+
+			&::placeholder {
+				color: var(--error-color);
+			}
+		}
+
+		svg {
+			fill: var(--error-color);
+		}
+	}
+
+	&:focus-within:not(.error) {
+		border-color: var(--main-color);
+		outline: none;
+	}
+
+	& > svg {
+		fill: var(--main-color);
+		margin-left: 1rem;
+	}
+
+	&__field {
+		background-color: transparent;
+		border: none;
+		caret-color: var(--main-color);
+		color: var(--main-color) !important;
+		font: bold variables.$fz-md variables.$font;
+		outline: none;
+		padding: 1rem;
+		width: 100%;
+
+		&:hover:not(:disabled),
+		&:focus:not(:disabled) {
+			border-color: var(--main-color);
+			outline: none;
+		}
+
+		&::placeholder {
+			color: var(--main-color);
+			font: normal variables.$fz-md variables.$font;
+		}
+
+		&:-webkit-autofill,
+		&:-webkit-autofill:hover,
+		&:-webkit-autofill:focus,
+		&:-webkit-autofill:active {
+			-webkit-box-shadow: 0 0 0 30px var(--body-bg inset);
+			-webkit-text-fill-color: var(--main-color);
+			box-shadow: 0 0 0 30px var(--body-bg inset);
+			font: normal variables.$fz-md variables.$font;
+		}
+
+		&:disabled {
+			cursor: not-allowed;
+		}
+	}
+
+	&__show {
+		background: none;
+		border: none;
+		margin-right: 1rem;
+
+		svg {
+			fill: var(--main-color);
+		}
+	}
+
+	&__error {
+		align-items: center;
+		color: var(--error-color);
+		display: inline-flex;
+		font: normal variables.$fz-md variables.$font;
+		margin: 0 0 1rem 1rem;
+
+		svg {
+			fill: var(--error-color);
+			margin-right: 0.5rem;
+		}
+	}
+}

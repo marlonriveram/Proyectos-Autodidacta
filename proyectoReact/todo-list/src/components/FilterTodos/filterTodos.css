@@ -1,0 +1,19 @@
+.filter{
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin-bottom: 20px;
+}
+.filter__all,
+.filter__active,
+.filter__pending{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 7px 0;
+    cursor: pointer;
+    margin-right: 8px;
+}

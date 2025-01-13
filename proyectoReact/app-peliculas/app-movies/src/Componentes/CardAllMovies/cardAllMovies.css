@@ -1,0 +1,39 @@
+.container-card-all-movies{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 384px;
+    cursor: pointer;
+}
+.container-img{
+    height: 100%;
+    position: relative;
+}
+.img-all-movie{
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.container-overview{
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    text-align: start;
+    position: absolute;
+    top: 0px;
+    border-radius: 8px;
+    font-size: 0.875rem/* 14px */;
+    line-height: 1.25rem/* 20px */;
+}
+
+@media (width <=769px) {
+    .container-card-all-movies{
+        height: 230px;
+    }
+}
+
+@media (width >=769px) {
+    .container-overview:hover{
+        background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+    }
+}

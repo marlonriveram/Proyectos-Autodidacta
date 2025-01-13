@@ -1,0 +1,9 @@
+.header-categorie{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 3.5rem 0.25rem 0.35rem;
+    padding-left: 3.5rem/* 56px */;
+    padding-right: 3.5rem/* 56px */;
+    padding-top: 0.25rem/* 4px */;
+    padding-bottom: 0.25rem
+}

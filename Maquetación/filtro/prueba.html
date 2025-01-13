@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <figure class="data-filter" data-filter="frutas">
+          <img src="#" alt="manzanas">
+          <figcaption>Manzanas</figcaption>
+        </figure>
+        
+     
+     
+     <script>
+          function removeFilter(event) {
+  const filter = event.target.getAttribute('data-filter');
+  console.log(filter);
+}
+
+document.querySelector('img').addEventListener('click', removeFilter);
+
+
+
+     </script>
+</body>
+</html>

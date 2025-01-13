@@ -1,0 +1,21 @@
+body {
+  margin: auto;
+  background-color:hsl(185, 41%, 84%);
+  width: 50%;
+  min-width: 375px;
+
+}
+
+@media (min-width:400px) {
+  body{
+      
+    width: 70%;
+    min-width: 500px;
+  }
+}
+/* para quitar las flechitas de los input tipo number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

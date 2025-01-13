@@ -1,0 +1,22 @@
+.genre{
+    border: solid #3C0753;
+    color: #910A67;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight:bold;
+    padding: 8px;
+    width: 9rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+.genre:hover{
+    box-shadow: 0 0 10px #3C0753,0 0 20px #3C0753;
+}
+
+@media (width <= 530px) {
+    .genre{
+        width: 7.8rem;
+    }
+    
+}

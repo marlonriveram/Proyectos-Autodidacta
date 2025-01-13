@@ -1,0 +1,72 @@
+.main{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+  grid-auto-rows: 300px;
+  justify-items: center;
+  height: 100vh;
+}
+.circulo{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: blue;
+  justify-self: start;
+}
+
+.cuadrado{
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  justify-self: start;
+}
+
+.box{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  background: blue;
+  border-radius: 10px;
+}
+
+.item{
+  width: 80%;
+  height: 10%;
+  background: white;
+
+}
+.imagen{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 5%;
+ background-color: blue;
+ clip-path: circle(30px at 34px 36px);
+ transition: 1s;
+}
+
+.imagen:hover{
+  clip-path: circle(100%);
+  transition: 1s;
+}
+.menu{
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.scale{
+  width: 100px;
+  height: 100px;
+  background: khaki;
+  transition: 1s;
+  transform-origin: top left;
+  transform: scale(0.5);
+}
+
+.scale:hover{
+  transform: scale(100%);
+}

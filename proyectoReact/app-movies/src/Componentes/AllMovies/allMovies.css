@@ -1,0 +1,13 @@
+.all-movies{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,300px));
+    grid-auto-rows: 300px;
+    justify-content: center;
+    width: 98%;
+}
+
+@media (width <= 520px) {
+    .all-movies{
+        grid-template-columns: repeat(auto-fit,minmax(100px,180px));
+    }
+}

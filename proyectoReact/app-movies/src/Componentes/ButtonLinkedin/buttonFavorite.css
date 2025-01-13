@@ -1,0 +1,6 @@
+.btn-favorite{
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+    cursor: pointer;
+}

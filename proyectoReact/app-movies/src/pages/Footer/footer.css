@@ -1,0 +1,18 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #910A67;
+    margin-top: 30px;
+    padding: 8px 14px;
+}
+.footer-credits{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.redes-sociales{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}

@@ -1,0 +1,40 @@
+.modalBackgroud{
+    background:rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+}
+.create-task{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: khaki;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 8px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.create__task-title_task{
+    height: 20px;
+}
+.create-task__content-task{
+    max-width: 100%;
+    max-height: 40%;
+}
+.create-task__btns{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 20px;
+}
+@media (width <= 400px) {
+    .create-task{
+        width: 70%;
+    }
+}

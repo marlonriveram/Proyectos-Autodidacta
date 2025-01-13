@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menú</title>
+    <style>
+        *{
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        header{
+            background: orange;
+            display: flex;
+            justify-content: space-between;
+            height: 60px;
+        }
+        .navbar__menu{
+            display: flex;
+            flex-grow: 1;
+            position: relative;
+          
+        }
+        .caja{
+            position: absolute;
+            right: 8px;
+            top: 10px;
+            width: 60px;
+            height: 40px;
+      
+            cursor: pointer;
+        }
+        .linea1, .linea2 ,.linea3{
+            content: '';
+            border-radius: 2px;
+            position: absolute;
+            background-color: black;
+            width: 60px;
+            height: 5px;
+            transition: all 400ms;
+            display: none;
+            
+        }
+        .linea2{
+            top: 17.5px
+            
+        }
+        .linea3{
+            bottom: 0px;
+        }
+        .navbar__menu__items{
+            display: flex;
+            justify-content: space-evenly;
+            padding: 15px;
+            flex-grow: 1;
+            list-style-type: none;
+            transition: all 400ms;
+          
+          
+        }
+        img{
+            height: 50px;
+        }
+        .caja_check{
+            display: none;
+        }
+        .caja_check:checked ~ .caja .linea1{
+
+            transform: rotate(45deg);
+            top: 10px;
+        }
+        .caja_check:checked ~ .caja .linea2{
+
+            transform:translate(-30px,1px);
+            opacity: 0;
+            top: 10px;
+        }
+        .caja_check:checked ~ .caja .linea3{
+
+            transform: rotate(-45deg);
+            top: 10px;
+        }
+        .caja_check:checked ~ .navbar__menu__items{
+            transform: translateX(0);
+        }
+        .caja{
+             display:block;
+        }
+       
+      @media (max-width:600px) {
+
+        .navbar__menu__items{
+            width: 200px;
+            flex-direction: column;
+            background-color: papayawhip;
+            flex-grow: 0;
+            height: 300px;
+            padding: 20px;
+            transform: translateX(100%);
+         
+        }
+       
+        
+        .navbar__menu{
+            justify-content: end;
+            flex-grow: 1;
+        }
+        img{
+            flex-grow: 1;
+        }
+        .linea1, .linea2 ,.linea3{
+            display: block;  
+        }
+         
+      
+      }
+
+    
+    </style>
+
+</head>
+<body>
+    
+    <header class="navbar">
+        <img src="./LogoMakr-0gjMh0.png" alt="">
+        <nav class="navbar__menu">
+            <input type="checkbox" class="caja_check" id="caja">
+            <ul class="navbar__menu__items">
+                <li>Servicios</li>
+                <li>Quienes Somos</li>
+                <li>Productos</li>
+                <li>Contacto</li>
+            </ul>
+            <label for="caja" class="caja">
+                <span class="linea1"></span>
+                <span class="linea2"></span>
+                <span class="linea3"></span>
+        </label>
+        </nav>
+    </header>
+
+</body>
+</html>

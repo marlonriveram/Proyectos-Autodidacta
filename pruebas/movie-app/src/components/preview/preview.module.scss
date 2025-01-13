@@ -1,0 +1,49 @@
+@use "styles/variables.scss";
+
+.preview {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 1rem;
+	margin-top: 2rem;
+
+	&__title {
+		align-items: center;
+		display: flex;
+		font-size: variables.$fz-xl;
+		justify-content: center;
+
+		div {
+			margin-left: 0.5rem;
+		}
+	}
+
+	&__link {
+		color: var(--text-color);
+		font-size: variables.$fz-md;
+		text-decoration: none;
+		transition: color 0.3s ease;
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: var(--main-text-color);
+			text-decoration: underline;
+		}
+	}
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+	grid-auto-columns: min-content;
+	margin: 0 auto;
+	max-width: 115rem;
+	width: 100%;
+}
+
+@media (min-width: 768px) {
+	.grid {
+		grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+	}
+}

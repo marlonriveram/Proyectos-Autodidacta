@@ -1,0 +1,24 @@
+*{
+    margin:0px;
+    box-sizing: border-box;
+}
+.header-carousel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    margin:8px 0px;
+}
+.header-carousel---text_color{
+    color: #720455;
+}
+.header-carousel-title{
+    font-size: 1.5rem;
+}
+.see-more{
+    text-decoration:none;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;  
+}

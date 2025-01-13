@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #87CBB9;
+            display: grid;
+            grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+            gap: 20px;
+            padding: 30px 0;
+            
+        }
+        .btn{
+            position: relative;
+            font-size: 2rem;
+            text-decoration: none;
+            letter-spacing: 4px;
+            color: white;
+            padding: 10px;
+            text-align: center;
+
+        }
+        .btn-neon{
+            background-color:rgba(188, 228, 75 , 0.3);
+            transition: 2s;
+            overflow: hidden;
+        }
+        .btn-neon:hover{
+            background-color:rgba(188, 228, 75 , 1);
+            box-shadow:0px 0px 10px rgba(188, 228, 75 , 1),0px 0px 40px rgba(188, 228, 75 , 1),0px 0px 80px rgba(188, 228, 75 , 1);
+            transition-delay: 1s;
+        }
+        .btn span{
+            position: absolute; 
+            display: block;
+        }
+        .border__top__neon{
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background:linear-gradient(90deg,transparent,rgba(188, 228, 75 , 1));
+        }
+        .btn-neon:hover .border__top__neon{
+            left: 100%;
+            transition: 0.5s;
+        }
+        .border__right__neon{
+            top:-100%;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background:linear-gradient(180deg,transparent,rgb(188, 228, 75));
+          
+        }
+        .btn-neon:hover .border__right__neon{
+            top: 100%;
+            transition: 1s;
+        }
+        .border__buttom__neon{
+            bottom: 0;
+            right:-100%;
+            width: 100%;
+            height: 2px;
+            background:linear-gradient(90deg,transparent,rgba(188, 228, 75 , 1));
+        }
+        .btn-neon:hover .border__buttom__neon{
+            right: 100%;
+            transition: 1.5s;
+        }
+      
+
+        .border__left__neon{
+            bottom:-100%;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background:linear-gradient(0deg,transparent,rgba(188, 228, 75 , 1));
+          
+        }
+        .btn-neon:hover .border__left__neon{
+            bottom: 100%;
+            transition: 2s;
+        }
+
+        .btn__barra__baja{
+            background-color: salmon;
+        }
+
+        .border__bottom__baja{
+            width: 50%;
+            height: 2px;
+            bottom:10px;
+            left: 0px;
+            background-color: white;
+           transform:translateX(50%);
+           opacity: 0;
+           transition: 0.2s;
+        }
+
+        .btn__barra__baja:hover .border__bottom__baja{
+            opacity: 1;
+        }
+        .btn__marco{
+            color:white; 
+            transition: 0.5s;
+            background-color:#569DAA;
+            border: 2px solid #569DAA;
+        }
+        .btn__marco:hover{
+           
+            background-color:#87CBB9;
+        }
+        .btn__box{
+            border: 3px solid white;
+            transition: 0.5s;
+        }
+        .btn__box:hover{
+            border: 3px solid #569DAA;
+            box-shadow: 0 0 20px #569DAA,0 0 40px #569DAA;
+
+        }
+        .box--tamaño{
+            width: 16px;
+            height: 16px;
+            background-color: #569DAA;
+            transition: 0.5s;
+          
+        }
+        .box1{
+            top: -9px;
+            left: 5%;
+        }
+     
+        .box2{
+            bottom: -9px;
+            right: 5%;
+        }
+        .btn__box:hover .box1{
+            left: 80%;
+            transform: rotate(45deg);
+           
+        }
+     
+        .btn__box:hover .box2{
+            right: 80%;
+            transform: rotate(45deg);
+        }
+    </style>
+    
+</head>
+<body>
+    <a href="#" class="btn-neon btn">
+        <span class="border__top__neon"></span>
+        <span class="border__buttom__neon"></span>
+        <span class="border__left__neon"></span>
+        <span class="border__right__neon"></span>
+        BOTON
+    </a>
+    <a href="#" class="btn__barra__baja btn">
+        <span class="border__bottom__baja"></span>
+  
+        BOTON
+    </a>
+       <a href="#" class="btn__marco btn">
+        <span class="border__top"></span>
+        <span class="border__buttom"></span>
+        <span class="border__left"></span>
+        <span class="border__right"></span>
+        BOTON
+    </a>
+    <a href="#" class="btn__box btn">
+        <span class="box1 box--tamaño"></span>
+        <span class="box2 box--tamaño"></span>
+    
+        BOTON
+    </a>
+
+    <script src="./prueba.js"></script>
+</body>
+</html>

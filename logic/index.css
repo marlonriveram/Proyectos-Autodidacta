@@ -1,0 +1,42 @@
+.titulo,.ejercicios{
+    margin: auto;
+}
+p{
+    margin: 0;
+}
+
+.flex{
+    display: flex;
+}
+main{
+    flex-direction: column;
+    gap: 8px;
+    width: 80%;
+    border-radius: 10px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 40px;
+    background-color: khaki;
+    text-align: center;
+}
+
+.ejercicios{
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(179, 178, 165);
+    width: 80%;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.cards_eneunciados{
+    flex-direction: column;
+    gap: 8px;
+    text-align: start;
+    cursor: pointer;
+}
+.card_enunciado{
+    padding: 6px 5px;
+    border-radius: 6px;
+    background-color: #ffff;
+}

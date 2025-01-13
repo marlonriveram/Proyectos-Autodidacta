@@ -1,0 +1,8 @@
+.container-input-personas{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 20px 0;
+}
+.num-Personas{
+    height: 40px;
+}

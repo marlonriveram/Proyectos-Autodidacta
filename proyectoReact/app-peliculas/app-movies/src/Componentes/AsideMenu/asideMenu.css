@@ -1,0 +1,13 @@
+.aside-menu{
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+    padding: 12px;
+    position: absolute;
+    top: 0px;
+}
+.navbar-aside{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}

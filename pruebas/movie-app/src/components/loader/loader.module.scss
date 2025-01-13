@@ -1,0 +1,56 @@
+@use "styles/variables.scss";
+
+.loader {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	grid-column: 1 / -1;
+	justify-content: center;
+	width: 100%;
+	z-index: 10;
+
+	svg {
+		fill: var(--main-color);
+	}
+
+	p {
+		color: var(--main-color);
+		font-size: variables.$fz-md;
+	}
+}
+
+.fixed {
+	align-items: center;
+	background-image: radial-gradient(circle, var(--secondary-body-bg) 0%, var(--body-bg) 100%);
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	left: 0;
+	gap: 0.5rem;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+
+	img {
+		animation: pulse 3s both ease-in-out infinite;
+		max-width: 19rem;
+		width: 40%;
+	}
+
+	@keyframes pulse {
+		0% {
+			transform: scale(1);
+		}
+
+		50% {
+			transform: scale(1.1);
+		}
+
+		100% {
+			transform: scale(1);
+		}
+	}
+}

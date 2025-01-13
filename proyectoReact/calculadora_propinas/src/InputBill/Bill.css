@@ -1,0 +1,10 @@
+.container-input-costo{
+    display: flex;
+    flex-direction: column;
+    margin: 4px;
+}
+
+.costo{
+    height: 40px;
+}
+

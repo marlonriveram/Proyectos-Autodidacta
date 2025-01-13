@@ -1,0 +1,12 @@
+body{
+  margin:0px;
+}
+main{
+  min-width: 300px;
+  /* padding: 16px; */
+  background-color: #030637;
+}
+p,h1,h2,h3
+{
+  font-family:fredoka;
+}

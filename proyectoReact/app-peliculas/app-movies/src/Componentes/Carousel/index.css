@@ -1,0 +1,22 @@
+.carosuel{
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+}
+.container-slider{
+    overflow: hidden;
+    margin: 0 16px;
+}
+.slider{
+    display: flex;
+    gap: 8px;
+    width: calc((110px)*20);
+    
+}
+
+@media (width <= 769px) {
+    .container-slider{
+        overflow:scroll;
+    }
+}

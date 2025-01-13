@@ -1,0 +1,9 @@
+.loading{
+    display: grid;
+    place-content: center;
+    font-size: 30px;
+    padding: 12px;
+}
+.loading p{
+    color: #3C0753;
+}

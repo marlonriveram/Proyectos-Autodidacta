@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll</title>
+    <style>
+        body{
+            margin: 0;
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            align-items: center;
+        }
+        .box
+        {
+            background-color: black;
+            width:500px;
+            height:150px;
+            border: 3px solid red;
+            border-radius: 20px;
+            margin-bottom: 8px;
+           
+        }
+
+        .inactive {
+            opacity: 0;
+        }
+
+        .active{
+            opacity: 1;
+        }
+
+  
+    </style>
+</head>
+<body>
+    <!-- <p>scroll window</p>
+    <button id="btn1"> push</button> -->
+    <input type="file">
+       <div class="container">
+
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+
+    <p class="inactive ">CARGANDO ...</p>
+
+    <script src="./document.js"></script>
+</body>
+</html>
