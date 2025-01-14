@@ -1,4 +1,4 @@
-import { randomUUID } from 'node:crypto' // biblioteca nativa de node, para genera id random
+import {randomUUID } from 'node:crypto' // biblioteca nativa de node, para genera id random
 import { readJSON } from '../utils.js'
 const movies = readJSON('./movies.json')
 
@@ -20,7 +20,7 @@ class MovieModel {
   static async create ({ input }) {
     // Esto va se realiza en la base de datos
     const idNewMovie = randomUUID()// para simulara el id autoIncrement de un base de datos
-    const newMovie = { id: idNewMovie, ...input }
+    const newMovie = { id:idNewMovie,...input }
 
     movies.push(newMovie)
     return newMovie
